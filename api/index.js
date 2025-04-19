@@ -5,12 +5,12 @@ export default function handler(req, res) {
 
   if (type === 'job' && id) {
     res.writeHead(301, {
-      Location: `https://app.recruitera.ai/legacy-redirect?id=${id}`,
+      Location: `https://app.recruitera.ai/version-test/legacy-redirect?id=${id}`,
     });
     res.end();
   } else {
     res.writeHead(302, {
-      Location: `https://app.recruitera.ai`,
+      Location: `https://app.recruitera.ai/version-test`,
     });
     res.end();
   }
