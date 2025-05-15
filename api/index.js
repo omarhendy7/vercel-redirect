@@ -3,7 +3,7 @@ export default function handler(req, res) {
   const type = pathParts[1]; // e.g. "job"
   const id = pathParts[2];   // e.g. "123"
 
-  if (type === 'job' && id) {
+  if (type === 'job_details' && id) {
     res.writeHead(301, {
       Location: `https://app.recruitera.ai/legacy-redirect?id=${id}`,
     });
